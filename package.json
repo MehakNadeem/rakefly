@@ -1,8 +1,8 @@
 {
     "name": "rake-runner",
-    "displayName": "Rake Runner",
+    "displayName": "Rake Fly",
     "description": "Run Rake tasks with a single click directly in your editor",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "Mehak10",
     "icon": "images/rakefly_logo.png",
     "repository": {
