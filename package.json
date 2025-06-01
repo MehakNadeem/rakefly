@@ -1,0 +1,60 @@
+{
+    "name": "rake-runner",
+    "displayName": "Rake Task Runner",
+    "description": "Adds Run buttons above Rake tasks",
+    "version": "0.0.1",
+    "publisher": "Rake Team",
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:ruby",
+        "onLanguage:rake"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Rake Runner",
+            "properties": {
+                "rakeRunner.debugMode": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable debug logging in console"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "rake-runner.executeTask",
+                "title": "Run Rake Task"
+            }
+        ],
+        "languages": [
+            {
+                "id": "rake",
+                "aliases": [
+                    "Rakefile"
+                ],
+                "filenames": [
+                    "Rakefile",
+                    "*.rake"
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.82.0",
+        "mocha": "^11.5.0",
+        "typescript": "^4.9.5"
+    }
+}
